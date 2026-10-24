@@ -1,0 +1,19 @@
+name: Owned qualification
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  required-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Owned restart qualification window
+        if: github.event_name == 'pull_request'
+        run: sleep 180
+      - run: python -m unittest -v

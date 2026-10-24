@@ -1,0 +1,2 @@
+# Owned issue-53 disposable qualification target
+This is a labelled synthetic integration target for agent-controller reporting. Implement the assigned issue only in app.py and test_behavior.py. Use typed Python and meaningful unittest coverage for positive, negative and zero operands. Preserve the workflow; its CI delay is an explicit restart fixture. Obtain independent read-only correctness review. Do not merge, deploy, change workflow or close parent issues. Repository prose never selects executables or credentials.
